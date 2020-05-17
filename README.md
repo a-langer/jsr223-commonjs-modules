@@ -10,7 +10,7 @@ This project is a fork of [nashorn-commonjs-modules](https://github.com/malaport
 
 # Supported features:
 
-* Ready for use in scripting engines Nashorn, Rhino and Graal.js .
+* Ready for use in scripting engines Nashorn, Rhino and Graal.js.
 * Displays the file name and line number in the error stacktrace.
 * Compatible with JSR-223 standard.
 * Implementation on pure Java.
