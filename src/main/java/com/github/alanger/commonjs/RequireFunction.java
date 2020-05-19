@@ -1,4 +1,4 @@
-package am.langer.commonjs;
+package com.github.alanger.commonjs;
 
 import javax.script.ScriptException;
 

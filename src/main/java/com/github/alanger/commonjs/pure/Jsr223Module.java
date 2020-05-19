@@ -1,4 +1,4 @@
-package am.langer.commonjs.pure;
+package com.github.alanger.commonjs.pure;
 
 import javax.script.Bindings;
 import javax.script.Invocable;
@@ -7,11 +7,11 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptException;
 import javax.script.SimpleScriptContext;
 
-import am.langer.commonjs.AbstractModule;
-import am.langer.commonjs.Folder;
-import am.langer.commonjs.ModuleCache;
-import am.langer.commonjs.ModuleException;
-import am.langer.commonjs.Paths;
+import com.github.alanger.commonjs.AbstractModule;
+import com.github.alanger.commonjs.Folder;
+import com.github.alanger.commonjs.ModuleCache;
+import com.github.alanger.commonjs.ModuleException;
+import com.github.alanger.commonjs.Paths;
 
 public class Jsr223Module extends AbstractModule {
 

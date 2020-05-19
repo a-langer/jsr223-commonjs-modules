@@ -1,4 +1,4 @@
-package am.langer.commonjs.rhino;
+package com.github.alanger.commonjs.rhino;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -12,10 +12,10 @@ import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
 import org.mozilla.javascript.Undefined;
 
-import am.langer.commonjs.AbstractModule;
-import am.langer.commonjs.Folder;
-import am.langer.commonjs.ModuleCache;
-import am.langer.commonjs.pure.Jsr223Module;
+import com.github.alanger.commonjs.AbstractModule;
+import com.github.alanger.commonjs.Folder;
+import com.github.alanger.commonjs.ModuleCache;
+import com.github.alanger.commonjs.pure.Jsr223Module;
 
 public class RhinoModule extends Jsr223Module implements Function {
 

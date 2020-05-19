@@ -1,4 +1,4 @@
-package am.langer.commonjs;
+package com.github.alanger.commonjs;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -24,10 +24,10 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import am.langer.commonjs.AbstractModule;
-import am.langer.commonjs.FilesystemFolder;
-import am.langer.commonjs.Folder;
-import am.langer.commonjs.Require;
+import com.github.alanger.commonjs.AbstractModule;
+import com.github.alanger.commonjs.FilesystemFolder;
+import com.github.alanger.commonjs.Folder;
+import com.github.alanger.commonjs.Require;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ModuleTest {
@@ -491,7 +491,7 @@ public class ModuleTest {
     // This one only failed on older JREs
     @Test
     public void itCanUseHighlightJsLibraryFromNpm() throws Throwable {
-        File file = new File("src/test/resources/am/langer/commonjs_modules/test2");
+        File file = new File("src/test/resources/com/github/alanger/commonjs_modules/test2");
         FilesystemFolder root = FilesystemFolder.create(file, "UTF-8");
         require = Require.enable(engine, root);
         engine.eval("require('highlight.js').highlight('java', '\"foo\"')");
@@ -526,7 +526,7 @@ public class ModuleTest {
 
     @Test
     public void itCanLoadInvariantFromFbjs() throws Throwable {
-        File file = new File("src/test/resources/am/langer/commonjs_modules/test3");
+        File file = new File("src/test/resources/com/github/alanger/commonjs_modules/test3");
         FilesystemFolder root = FilesystemFolder.create(file, "UTF-8");
         require = Require.enable(engine, root);
         engine.eval("require('fbjs/lib/invariant')");
@@ -536,7 +536,7 @@ public class ModuleTest {
 
     @Test
     public void itCanShortCircuitCircularRequireReferences() throws Throwable {
-        File file = new File("src/test/resources/am/langer/commonjs_modules/test4/cycles");
+        File file = new File("src/test/resources/com/github/alanger/commonjs_modules/test4/cycles");
         FilesystemFolder root = FilesystemFolder.create(file, "UTF-8");
         require = Require.enable(engine, root);
         engine.eval("require('./main.js')");
@@ -544,7 +544,7 @@ public class ModuleTest {
 
     @Test
     public void itCanShortCircuitDeepCircularRequireReferences() throws Throwable {
-        File file = new File("src/test/resources/am/langer/commonjs_modules/test4/deep");
+        File file = new File("src/test/resources/com/github/alanger/commonjs_modules/test4/deep");
         FilesystemFolder root = FilesystemFolder.create(file, "UTF-8");
         require = Require.enable(engine, root);
         engine.eval("require('./main.js')");

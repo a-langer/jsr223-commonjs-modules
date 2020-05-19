@@ -1,4 +1,4 @@
-package am.langer.commonjs;
+package com.github.alanger.commonjs;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -10,12 +10,12 @@ import javax.script.ScriptEngine;
 
 import org.junit.Test;
 
-import am.langer.commonjs.Folder;
-import am.langer.commonjs.Require;
-import am.langer.commonjs.ResourceFolder;
+import com.github.alanger.commonjs.Folder;
+import com.github.alanger.commonjs.Require;
+import com.github.alanger.commonjs.ResourceFolder;
 
 public class ResourceFolderTest {
-    private ResourceFolder root = ResourceFolder.create(getClass().getClassLoader(), "am/langer/commonjs_modules/test1",
+    private ResourceFolder root = ResourceFolder.create(getClass().getClassLoader(), "com/github/alanger/commonjs_modules/test1",
             "UTF-8");
 
     @Test

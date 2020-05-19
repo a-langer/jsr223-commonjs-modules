@@ -1,14 +1,14 @@
-package am.langer.commonjs;
+package com.github.alanger.commonjs;
 
 import javax.script.Bindings;
 import javax.script.ScriptContext;
 import javax.script.ScriptEngine;
 import javax.script.ScriptException;
 
-import am.langer.commonjs.graalvm.GraalModule;
-import am.langer.commonjs.nashorn.NashornModule;
-import am.langer.commonjs.pure.Jsr223Module;
-import am.langer.commonjs.rhino.RhinoModule;
+import com.github.alanger.commonjs.graalvm.GraalModule;
+import com.github.alanger.commonjs.nashorn.NashornModule;
+import com.github.alanger.commonjs.pure.Jsr223Module;
+import com.github.alanger.commonjs.rhino.RhinoModule;
 
 public class Require {
 

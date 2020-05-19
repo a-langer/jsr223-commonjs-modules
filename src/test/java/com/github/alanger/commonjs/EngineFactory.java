@@ -1,4 +1,4 @@
-package am.langer.commonjs;
+package com.github.alanger.commonjs;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -7,9 +7,8 @@ import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.HostAccess;
 import org.junit.Ignore;
 
+import com.github.alanger.commonjs.Require;
 import com.oracle.truffle.js.scriptengine.GraalJSScriptEngine;
-
-import am.langer.commonjs.Require;
 
 @Ignore
 public class EngineFactory {

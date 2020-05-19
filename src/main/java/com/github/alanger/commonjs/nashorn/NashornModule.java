@@ -1,4 +1,4 @@
-package am.langer.commonjs.nashorn;
+package com.github.alanger.commonjs.nashorn;
 
 import java.lang.reflect.Method;
 
@@ -7,10 +7,10 @@ import javax.script.ScriptContext;
 import javax.script.ScriptEngine;
 import javax.script.ScriptException;
 
-import am.langer.commonjs.AbstractModule;
-import am.langer.commonjs.Folder;
-import am.langer.commonjs.ModuleCache;
-import am.langer.commonjs.Paths;
+import com.github.alanger.commonjs.AbstractModule;
+import com.github.alanger.commonjs.Folder;
+import com.github.alanger.commonjs.ModuleCache;
+import com.github.alanger.commonjs.Paths;
 
 public class NashornModule extends AbstractModule {
 

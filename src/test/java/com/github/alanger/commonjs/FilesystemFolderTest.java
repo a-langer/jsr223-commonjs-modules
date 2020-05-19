@@ -1,10 +1,10 @@
-package am.langer.commonjs;
+package com.github.alanger.commonjs;
 
 import org.junit.Test;
 
-import am.langer.commonjs.FilesystemFolder;
-import am.langer.commonjs.Folder;
-import am.langer.commonjs.Require;
+import com.github.alanger.commonjs.FilesystemFolder;
+import com.github.alanger.commonjs.Folder;
+import com.github.alanger.commonjs.Require;
 
 import java.io.File;
 
@@ -16,7 +16,7 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 public class FilesystemFolderTest {
-    private File file = new File("src/test/resources/am/langer/commonjs_modules/test1");
+    private File file = new File("src/test/resources/com/github/alanger/commonjs_modules/test1");
     private FilesystemFolder root = FilesystemFolder.create(file, "UTF-8");
 
     private File subfile = new File(file, "subdir");

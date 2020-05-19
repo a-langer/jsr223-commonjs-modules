@@ -1,4 +1,4 @@
-package am.langer.commonjs.graalvm;
+package com.github.alanger.commonjs.graalvm;
 
 import javax.script.Bindings;
 import javax.script.ScriptContext;
@@ -9,12 +9,11 @@ import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.Source;
 import org.graalvm.polyglot.Value;
 
+import com.github.alanger.commonjs.AbstractModule;
+import com.github.alanger.commonjs.Folder;
+import com.github.alanger.commonjs.ModuleCache;
+import com.github.alanger.commonjs.Paths;
 import com.oracle.truffle.js.scriptengine.GraalJSScriptEngine;
-
-import am.langer.commonjs.AbstractModule;
-import am.langer.commonjs.Folder;
-import am.langer.commonjs.ModuleCache;
-import am.langer.commonjs.Paths;
 
 public class GraalModule extends AbstractModule {
 

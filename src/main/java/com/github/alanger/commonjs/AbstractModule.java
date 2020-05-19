@@ -1,4 +1,4 @@
-package am.langer.commonjs;
+package com.github.alanger.commonjs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
