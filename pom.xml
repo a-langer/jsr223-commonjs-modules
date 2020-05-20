@@ -175,9 +175,9 @@
 				<executions>
 					<execution>
 						<id>nashorn</id>
-			            <goals>
-			                <goal>test</goal>
-			            </goals>
+						<goals>
+							<goal>test</goal>
+						</goals>
 						<configuration>
 							<skip>false</skip>
 							<systemPropertyVariables>
@@ -187,9 +187,9 @@
 					</execution>
 					<execution>
 						<id>graal.js</id>
-			            <goals>
-			                <goal>test</goal>
-			            </goals>
+						<goals>
+							<goal>test</goal>
+						</goals>
 						<configuration>
 							<skip>false</skip>
 							<systemPropertyVariables>
@@ -199,9 +199,9 @@
 					</execution>
 					<execution>
 						<id>rhino</id>
-			            <goals>
-			                <goal>test</goal>
-			            </goals>
+						<goals>
+							<goal>test</goal>
+						</goals>
 						<configuration>
 							<skip>false</skip>
 							<systemPropertyVariables>
@@ -233,7 +233,7 @@
 
 	<profiles>
 		<profile>
-			<id>release</id>
+			<id>ossrh</id>
 			<build>
 				<plugins>
 					<plugin>

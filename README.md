@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/a-langer/jsr223-commonjs-modules.svg?branch=master)](https://travis-ci.org/a-langer/jsr223-commonjs-modules)
 [![license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/a-langer/jsr223-commonjs-modules/blob/master/LICENSE)
-[![Maven](https://img.shields.io/github/tag/a-langer/jsr223-commonjs-modules.svg?label=maven)](https://jitpack.io/#a-langer/jsr223-commonjs-modules)
+[![Maven JitPack](https://img.shields.io/github/tag/a-langer/jsr223-commonjs-modules.svg?label=maven)](https://jitpack.io/#a-langer/jsr223-commonjs-modules)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.a-langer/jsr223-commonjs-modules/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.a-langer/jsr223-commonjs-modules)
 
 # CommonJS Modules Support for Nashorn, Rhino and Graal.js
 
@@ -21,11 +22,6 @@ This project is a fork of [nashorn-commonjs-modules](https://github.com/malaport
 Add this dependency to your `pom.xml` to reference the library:
 
 ```xml
-<repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-</repository>
-
 <dependency>
     <groupId>com.github.a-langer</groupId>
     <artifactId>jsr223-commonjs-modules</artifactId>

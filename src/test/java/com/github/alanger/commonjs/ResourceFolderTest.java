@@ -15,8 +15,8 @@ import com.github.alanger.commonjs.Require;
 import com.github.alanger.commonjs.ResourceFolder;
 
 public class ResourceFolderTest {
-    private ResourceFolder root = ResourceFolder.create(getClass().getClassLoader(), "com/github/alanger/commonjs_modules/test1",
-            "UTF-8");
+    private ResourceFolder root = ResourceFolder.create(getClass().getClassLoader(),
+            "com/github/alanger/commonjs_modules/test1", "UTF-8");
 
     @Test
     public void rootFolderHasTheExpectedProperties() {
