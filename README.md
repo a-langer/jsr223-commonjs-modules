@@ -103,13 +103,13 @@ The resulting folder is rooted at the path you specified, and JavaScript code wo
 Use the `ResourceFolder.create` method to create an implementation of `Folder` backed by Java resources:
 
 ```java
-ResourceFolder rootFolder = ResourceFolder.create(getClass().getClassLoader(), "am/langer/nashorn_modules/test1", "UTF-8");
+ResourceFolder rootFolder = ResourceFolder.create(getClass().getClassLoader(), "com/github/alanger/commonjs_modules/test1", "UTF-8");
 Require.enable(engine, rootFolder);
 ```
 
 As for `ResourceFolder`, you need to specify the encoding for the files that are read.
 
-## Related Repositories
+## Related repositories
 * [nashorn-commonjs-modules](https://github.com/malaporte/nashorn-commonjs-modules) - CommonJS for Nashorn.
 * [graal-commonjs-modules](https://github.com/transposit/graal-commonjs-modules) - CommonJS for Graal.js.
 * [jvm-npm](https://github.com/nodyn/jvm-npm) - CommonJS written on javascript for DynJS, Nashorn and Rhino.
