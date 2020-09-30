@@ -24,11 +24,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import com.github.alanger.commonjs.AbstractModule;
-import com.github.alanger.commonjs.FilesystemFolder;
-import com.github.alanger.commonjs.Folder;
-import com.github.alanger.commonjs.Require;
-
 @RunWith(MockitoJUnitRunner.class)
 public class ModuleTest {
     @Mock

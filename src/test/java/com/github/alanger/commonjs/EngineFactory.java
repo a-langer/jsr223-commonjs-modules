@@ -7,7 +7,6 @@ import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.HostAccess;
 import org.junit.Ignore;
 
-import com.github.alanger.commonjs.Require;
 import com.oracle.truffle.js.scriptengine.GraalJSScriptEngine;
 
 @Ignore

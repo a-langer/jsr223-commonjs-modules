@@ -1,19 +1,15 @@
 package com.github.alanger.commonjs;
 
-import org.junit.Test;
-
-import com.github.alanger.commonjs.FilesystemFolder;
-import com.github.alanger.commonjs.Folder;
-import com.github.alanger.commonjs.Require;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
 import javax.script.ScriptEngine;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
 public class FilesystemFolderTest {
     private File file = new File("src/test/resources/com/github/alanger/commonjs_modules/test1");

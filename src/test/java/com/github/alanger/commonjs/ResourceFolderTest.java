@@ -10,10 +10,6 @@ import javax.script.ScriptEngine;
 
 import org.junit.Test;
 
-import com.github.alanger.commonjs.Folder;
-import com.github.alanger.commonjs.Require;
-import com.github.alanger.commonjs.ResourceFolder;
-
 public class ResourceFolderTest {
     private ResourceFolder root = ResourceFolder.create(getClass().getClassLoader(),
             "com/github/alanger/commonjs_modules/test1", "UTF-8");
