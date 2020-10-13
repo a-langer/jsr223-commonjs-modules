@@ -59,7 +59,7 @@
         <rhino.js.engine.version>1.7.10</rhino.js.engine.version>
         <rhino.version>1.7.12</rhino.version>
         <graalvm.version>20.0.0</graalvm.version>
-        <junit.version>4.13</junit.version>
+        <junit.version>4.13.1</junit.version>
         <mockito.version>3.3.3</mockito.version>
     </properties>
 
