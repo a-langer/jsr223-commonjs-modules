@@ -128,7 +128,9 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>${maven.jar.plugin.version}</version>
                 <configuration>
-                    <excludePomFiles>true</excludePomFiles>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
                 </configuration>
             </plugin>
             <plugin>
@@ -215,7 +217,7 @@
                 <artifactId>formatter-maven-plugin</artifactId>
                 <version>${formatter.maven.plugin.version}</version>
                 <configuration>
-                    <_configFile>${project.basedir}/google-code-style.xml</_configFile>
+<!--                     <configFile>${project.basedir}/formatter.xml</configFile> -->
                 </configuration>
                 <executions>
                     <execution>
