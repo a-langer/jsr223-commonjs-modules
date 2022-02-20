@@ -87,10 +87,15 @@ public class Jsr223Module extends AbstractModule {
             SimpleScriptContext ctx = new SimpleScriptContext();
             ctx.setAttribute("JAVA_MODULE", this, ScriptContext.ENGINE_SCOPE);
 
-            String moduleException = ModuleException.class.getCanonicalName();
-            this.nativeModule = engine.eval(
-                    "(function(path) { \n" + "try { \n" + "    return JAVA_MODULE.require(path) \n" + "} catch (e) { \n"
-                            + "    throw new " + moduleException + "(e.message, 'MODULE_NOT_FOUND') \n" + "} \n" + "})",
+            String me = ModuleException.class.getCanonicalName();
+            this.nativeModule = engine.eval(String.join("\n",
+                    "(function(path) {",
+                    "  try {",
+                    "    return JAVA_MODULE.require(path)",
+                    "  } catch (e) {",
+                    "    throw new " + me + "(e.message, 'MODULE_NOT_FOUND')",
+                    "  }",
+                    "})"),
                     ctx);
             putObject(nativeModule, "main", this.mainModule.getModule());
         }

@@ -26,8 +26,11 @@ public class EngineFactory {
         // https://github.com/graalvm/graaljs/blob/master/docs/user/ScriptEngine.md
         if (name.equals(Require.GRAALJS)) {
             engine = GraalJSScriptEngine.create(null,
-                    Context.newBuilder("js").allowHostAccess(HostAccess.ALL).allowHostClassLookup(s -> true)
-                            .allowAllAccess(true).allowNativeAccess(true).option("js.nashorn-compat", "true")
+                    Context.newBuilder("js").allowHostAccess(HostAccess.ALL)
+                            .allowHostClassLookup(s -> true)
+                            .allowAllAccess(true)
+                            .allowNativeAccess(true)
+                            .option("js.nashorn-compat", "true")
                             .option("js.ecmascript-version", "2020"));
         } else if (name.equals(Require.NASHORN)) {
             if (System.getProperty("nashorn.args") == null)

@@ -334,16 +334,16 @@ abstract public class AbstractModule extends SimpleBindings implements RequireFu
         Folder current = from;
         for (String name : folders) {
             switch (name) {
-            case "":
-                throw new IllegalArgumentException();
-            case ".":
-                continue;
-            case "..":
-                current = current.getParent();
-                break;
-            default:
-                current = current.getFolder(name);
-                break;
+                case "":
+                    throw new IllegalArgumentException();
+                case ".":
+                    continue;
+                case "..":
+                    current = current.getParent();
+                    break;
+                default:
+                    current = current.getFolder(name);
+                    break;
             }
 
             // Whenever we get stuck we bail out

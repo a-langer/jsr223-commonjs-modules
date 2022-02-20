@@ -25,13 +25,22 @@ Add this dependency to your `pom.xml` to reference the library:
 <dependency>
     <groupId>com.github.a-langer</groupId>
     <artifactId>jsr223-commonjs-modules</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
 # Usage
 
 Enabling `require` in Nashorn script engine:
+
+```xml
+<!-- Dependency need only for JDK 15 and later -->
+<dependency>
+    <groupId>org.openjdk.nashorn</groupId>
+    <artifactId>nashorn-core</artifactId>
+    <version>15.3</version>
+</dependency>
+```
 
 ```java
 ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
@@ -49,7 +58,7 @@ Enabling `require` in Rhino script engine:
 <dependency>
     <groupId>org.mozilla</groupId>
     <artifactId>rhino</artifactId>
-    <version>1.7.12</version>
+    <version>1.7.14</version>
 </dependency>
 ```
 
@@ -64,12 +73,12 @@ Enabling `require` in Graal.js script engine:
 <dependency>
     <groupId>org.graalvm.js</groupId>
     <artifactId>js-scriptengine</artifactId>
-    <version>20.0.0</version>
+    <version>22.0.0.2</version>
 </dependency>
 <dependency>
     <groupId>org.graalvm.js</groupId>
     <artifactId>js</artifactId>
-    <version>20.0.0</version>
+    <version>22.0.0.2</version>
 </dependency>
 ```
 

@@ -58,19 +58,20 @@ public class NashornModule extends AbstractModule {
 
         try {
             // This mimics how Node wraps module in a function. I used to pass a 2nd
-            // parameter
-            // to eval to override global context, but it caused problems Object.create.
-            //
-            // The \n at the end is to take care of files ending with a comment
+            // parameter to eval to override global context, but it caused problems
+            // Object.create. The \n at the end is to take care of files ending with a
+            // comment
+
             Object function = engine
                     .eval("(function (exports, require, module, __filename, __dirname) {" + code + "\n})");
             Object[] args = { created.exports, created, created.module, filename, dirname };
 
-            // Dirty fix for Nashorn, else one test returns "TypeError: [object Object] is
-            // not an Object"
-            // Calling ((jdk.nashorn.api.scripting.ScriptObjectMirror)function).call(created, args);
+            // Dirty fix for Nashorn: "TypeError: [object Object] is not an Object"
+            // Calling ((<package>.ScriptObjectMirror)function).call(created, args);
             try {
-                Class<?> scriptObjectClass = Class.forName("jdk.nashorn.api.scripting.ScriptObjectMirror");
+                // Nashorn moved to external library after JDK11
+                String className = engine.getClass().getPackage().getName() + ".ScriptObjectMirror";
+                Class<?> scriptObjectClass = Class.forName(className);
                 Method call = scriptObjectClass.getMethod("call", Object.class, Object[].class);
                 call.invoke(function, created, args);
             } catch (Exception e) {

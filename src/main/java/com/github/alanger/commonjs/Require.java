@@ -18,6 +18,7 @@ public class Require {
     public static final String RHINO_NAME = "Mozilla Rhino";
     public static final String NASHORN = "nashorn";
     public static final String NASHORN_NAME = "Oracle Nashorn";
+    public static final String MODULE_NAME = "jsr223.module.name";
 
     // This overload registers the require function globally in the engine scope
     public static AbstractModule enable(ScriptEngine engine, Folder folder) throws ScriptException {
@@ -37,14 +38,14 @@ public class Require {
         Object exports = engine.eval("({})");
 
         String name = engine.getFactory().getEngineName();
-        String className = engine.getClass().getCanonicalName();
+        String prop = System.getProperty(MODULE_NAME);
 
-        // Engine implementation may be changed, e.x.: -Dcustom.engine.class.Name="rhino"
-        if (NASHORN_NAME.equals(name) || NASHORN.equals(System.getProperty(className))) {
+        // Module class may be changed: -Djsr223.module.name="rhino"
+        if (prop == null && NASHORN_NAME.equals(name) || NASHORN.equals(prop)) {
             created = new NashornModule(engine, folder, new ModuleCache(), "<main>", module, exports, null, null);
-        } else if (RHINO_NAME.equals(name) || RHINO.equals(System.getProperty(className))) {
+        } else if (prop == null && RHINO_NAME.equals(name) || RHINO.equals(prop)) {
             created = new RhinoModule(engine, folder, new ModuleCache(), "<main>", module, exports, null, null);
-        } else if (GRAALJS_NAME.equals(name) || GRAALJS.equals(System.getProperty(className))) {
+        } else if (prop == null && GRAALJS_NAME.equals(name) || GRAALJS.equals(prop)) {
             created = new GraalModule(engine, folder, new ModuleCache(), "<main>", module, exports, null, null);
         } else {
             created = new Jsr223Module(engine, folder, new ModuleCache(), "<main>", module, exports, null, null);

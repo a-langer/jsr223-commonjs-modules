@@ -39,7 +39,8 @@ public class ResourceFolder extends AbstractFolder {
         super(parent, displayPath);
         this.loader = loader;
         this.resourcePath = resourcePath.startsWith(CLASSPATH_PREFIX)
-                ? resourcePath.substring(CLASSPATH_PREFIX.length()) : resourcePath;
+                ? resourcePath.substring(CLASSPATH_PREFIX.length())
+                : resourcePath;
         this.encoding = encoding;
     }
 
