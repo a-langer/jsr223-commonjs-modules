@@ -1,15 +1,15 @@
+# CommonJS Modules Support for Nashorn, Rhino and Graal.js
+
 [![Build Status](https://travis-ci.org/a-langer/jsr223-commonjs-modules.svg?branch=master)](https://travis-ci.org/a-langer/jsr223-commonjs-modules)
-[![license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/a-langer/jsr223-commonjs-modules/blob/master/LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/a-langer/jsr223-commonjs-modules/blob/master/LICENSE)
 [![Maven JitPack](https://img.shields.io/github/tag/a-langer/jsr223-commonjs-modules.svg?label=maven)](https://jitpack.io/#a-langer/jsr223-commonjs-modules)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.a-langer/jsr223-commonjs-modules/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.a-langer/jsr223-commonjs-modules)
-
-# CommonJS Modules Support for Nashorn, Rhino and Graal.js
 
 This library adds support for CommonJS modules (aka `require`) inside a Nashorn, Rhino and Graal.js script engines. It is based on the specification for [NodeJS modules](https://nodejs.org/api/modules.html) and it supports loading modules from the `node_modules` folder just as Node does. Of course, it doesn't provide an implementation for Node's APIs, so any module that depends on those won't work.
 
 This project is a fork of [nashorn-commonjs-modules](https://github.com/malaporte/nashorn-commonjs-modules).
 
-# Supported features:
+## Supported features
 
 * Ready for use in scripting engines Nashorn, Rhino and Graal.js.
 * Displays the file name and line number in the error stacktrace.
@@ -17,7 +17,7 @@ This project is a fork of [nashorn-commonjs-modules](https://github.com/malaport
 * Implementation on pure Java.
 * No dependency on third-party libraries.
 
-# Getting the library using Maven
+## Getting the library using Maven
 
 Add this dependency to your `pom.xml` to reference the library:
 
@@ -29,7 +29,7 @@ Add this dependency to your `pom.xml` to reference the library:
 </dependency>
 ```
 
-# Usage
+## Usage
 
 Enabling `require` in Nashorn script engine:
 
@@ -106,7 +106,6 @@ You need to specify the encoding of the files. Most of the time UTF-8 will be a 
 
 The resulting folder is rooted at the path you specified, and JavaScript code won't be able to "escape" that root by using `../../..`. In other words, it behaves as is the root folder was the root of the filesystem.
 
-
 ## Loading modules from Java resources
 
 Use the `ResourceFolder.create` method to create an implementation of `Folder` backed by Java resources:
@@ -122,4 +121,3 @@ As for `ResourceFolder`, you need to specify the encoding for the files that are
 * [nashorn-commonjs-modules](https://github.com/malaporte/nashorn-commonjs-modules) - CommonJS for Nashorn.
 * [graal-commonjs-modules](https://github.com/transposit/graal-commonjs-modules) - CommonJS for Graal.js.
 * [jvm-npm](https://github.com/nodyn/jvm-npm) - CommonJS written on javascript for DynJS, Nashorn and Rhino.
-
