@@ -125,7 +125,6 @@
                 <configuration>
                     <meminitial>64m</meminitial>
                     <maxmem>128m</maxmem>
-                    <encoding>${project.build.sourceEncoding}</encoding>
                     <optimize>true</optimize>
                     <compilerArgs>
                         <arg>-parameters</arg>
@@ -220,6 +219,14 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven.javadoc.plugin.version}</version>
+                        <configuration>
+                            <additionalparam>-Xdoclint:all -Xdoclint:-missing</additionalparam>
+                            <additionalOptions>-Xdoclint:all -Xdoclint:-missing</additionalOptions>
+                            <additionalJOptions>
+                                <additionalJOption>-Xdoclint:all</additionalJOption>
+                                <additionalJOption>-Xdoclint:-missing</additionalJOption>
+                            </additionalJOptions>
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
