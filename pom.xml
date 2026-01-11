@@ -60,7 +60,7 @@
         <maven.gpg.plugin.version>3.0.1</maven.gpg.plugin.version>
         <nashorn.version>15.3</nashorn.version>
         <rhino.js.engine.version>1.7.10</rhino.js.engine.version>
-        <rhino.version>1.7.14</rhino.version>
+        <rhino.version>1.7.14.1</rhino.version>
         <graalvm.version>22.0.0.2</graalvm.version>
         <junit.version>4.13.2</junit.version>
         <mockito.version>4.3.1</mockito.version>
